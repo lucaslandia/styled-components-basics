@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
+import GettingStarted from './components/GettingStarted'
+import AdaptingBasedOnProps from './components/AdaptingBasedOnProps'
+import ExtendingStyles from './components/ExtendingStyles'
+import StylingAnyComponent from './components/StylingAnyComponent'
+import PassedProps from './components/PassedProps'
+import AttachingAdditionalProps from './components/AttachingAdditionalProps'
+import Animations from './components/Animations'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const Container = styled.div`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+`
 
-export default App;
+const App = () =>
+  <>
+    <Container>
+      <GettingStarted />
+    </Container>
+    <Container>
+      <AdaptingBasedOnProps />
+    </Container>
+    <Container>
+      <ExtendingStyles />
+    </Container>
+    <Container>
+      <StylingAnyComponent />
+    </Container>
+    <Container>
+      <PassedProps />
+    </Container>
+    <Container>
+      <AttachingAdditionalProps/>
+    </Container>
+    <Container>
+      <Animations />
+    </Container>
+  </>
+
+export default App
